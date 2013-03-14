@@ -1,0 +1,51 @@
+#
+# Sets Prezto options.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Set the key mapping style to 'emacs' or 'vi'.
+zstyle ':prezto:module:editor' keymap 'emacs'
+
+# Auto convert .... to ../..
+zstyle ':prezto:module:editor' dot-expansion 'no'
+
+# Set case-sensitivity for completion, history lookup, etc.
+zstyle ':prezto:*:*' case-sensitive 'no'
+
+# Color output (auto set to 'no' on dumb terminals).
+zstyle ':prezto:*:*' color 'yes'
+
+# Auto set the tab and window titles.
+zstyle ':prezto:module:terminal' auto-title 'yes'
+#  the Zsh modules to load (man zshmodules).
+# zstyle ':prezto:load' zmodule 'attr' 'stat'
+
+# Set the Zsh functions to load (man zshcontrib).
+# zstyle ':prezto:load' zfunction 'zargs' 'zmv'
+
+# Set the Prezto modules to load (browse modules).
+# The order matters.
+zstyle ':prezto:load' pmodule \
+  'environment' \
+  'terminal' \
+  'editor' \
+  'command-not-found' \
+  'history' \
+  'directory' \
+  'spectrum' \
+  'utility' \
+  'completion' \
+  'git' \
+  'history-substring-search' \
+  'prompt'
+
+if [[ "$(whoami)" == "root" ]]; then
+  zstyle ':prezto:module:prompt' theme 'fire'
+else
+  zstyle ':prezto:module:prompt' theme 'peepcode'
+fi
+
+
+zstyle ':omz:module:tmux' auto-start 'yes'
