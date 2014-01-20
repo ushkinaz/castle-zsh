@@ -1,3 +1,4 @@
+#!/bin/sh
 #
 # Executes commands at logout.
 #

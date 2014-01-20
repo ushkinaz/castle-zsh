@@ -1,3 +1,4 @@
+#!/bin/sh
 # Paths
 
 typeset -gU cdpath fpath mailpath manpath path

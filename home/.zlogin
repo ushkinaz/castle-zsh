@@ -1,3 +1,4 @@
+#!/bin/sh
 #
 # Executes commands at login post-zshrc.
 #
@@ -23,7 +24,6 @@
 
 # Print a random, hopefully interesting, adage.
 if (( $+commands[fortune] )); then
-  fortune -a
+  fortune -as
   print
 fi
-
