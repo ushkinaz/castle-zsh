@@ -11,9 +11,6 @@ fi
 bindkey '\e[1~' beginning-of-line
 bindkey '\e[4~' end-of-line
 
-# Load RVM into a shell session *as a function*
-[[ -s "$rvm_path/scripts/rvm" ]] && source "$rvm_path/scripts/rvm"
-
 if [ -f $HOME/.aliases ]; then
    source $HOME/.aliases
 fi
