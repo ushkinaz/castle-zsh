@@ -1,52 +1,48 @@
-# if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-#   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-# fi
-
-
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
+
+# if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+#    source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+# fi
+
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-# flazz
-ZSH_THEME="pure"
+# pure,dst
+ZSH_THEME="kennethreitz"
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
+# Disable bi-weekly auto-update checks.
 DISABLE_AUTO_UPDATE="true"
 
-# Uncomment the following line to display red dots whilst waiting for completion.
+# Display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
+
+DISABLE_AUTO_TITLE="true"
+
+# disable marking untracked files under VCS as dirty
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git command-not-found mvn rvm sudo tmux vagrant )
+plugins=(history-substring-search command-not-found sudo mosh gitfast mvn gradle vagrant docker pj themes)
+
+# pj plugin
+PROJECT_PATHS=(~/Workspace/server/develop)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-if [ -x /usr/bin/dircolors ]; then
-   test -r $HOME/.dircolors && eval "$(dircolors -b $HOME/.dircolors)" || eval "$(dircolors -b)"
-fi
-
-bindkey '\e[1~' beginning-of-line
-bindkey '\e[4~' end-of-line
-
 if [ -f $HOME/.aliases ]; then
    source $HOME/.aliases
+fi
+
+# Common vars definitions
+if [ -f $HOME/.env ]; then
+    source $HOME/.env
 fi
 
 if [ -f $HOME/.xvm ]; then

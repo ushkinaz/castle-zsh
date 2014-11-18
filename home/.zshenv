@@ -60,9 +60,4 @@ if [[ -d "$TMPDIR" ]]; then
   fi
 fi
 
-# Common vars definitions.
-if [ -f $HOME/.env ]; then
-    source $HOME/.env
-fi
-
 export HISTSIZE=1000000
