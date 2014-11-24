@@ -36,13 +36,13 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-if [ -f $HOME/.aliases ]; then
-   source $HOME/.aliases
-fi
-
 # Common vars definitions
 if [ -f $HOME/.env ]; then
     source $HOME/.env
+fi
+
+if [ -f $HOME/.aliases ]; then
+   source $HOME/.aliases
 fi
 
 if [ -f $HOME/.xvm ]; then
