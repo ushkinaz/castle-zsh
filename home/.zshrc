@@ -11,7 +11,12 @@ export ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # pure,dst
-ZSH_THEME="kennethreitz"
+if [[ $EUID == 0 ]]
+then
+	ZSH_THEME="kennethreitz"
+else
+	ZSH_THEME="imajes"
+fi
 
 # Disable bi-weekly auto-update checks.
 DISABLE_AUTO_UPDATE="true"
@@ -27,7 +32,23 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(history-substring-search command-not-found sudo mosh gitfast mvn gradle vagrant docker pj themes)
+plugins=(
+	history-substring-search
+    command-not-found
+    docker
+    gitfast
+    gradle
+    mosh
+    mosh
+    mvn
+    pass
+    pj
+    redis-cli
+    sudo 
+    themes
+    tmuxinator
+    vagrant
+    )
 
 # pj plugin
 PROJECT_PATHS=(~/Workspace/server/develop)
