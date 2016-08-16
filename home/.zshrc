@@ -13,9 +13,9 @@ export ZSH=$HOME/.oh-my-zsh
 # pure,dst
 if [[ $EUID == 0 ]]
 then
-	ZSH_THEME="kennethreitz"
-else
 	ZSH_THEME="imajes"
+else
+	ZSH_THEME="kennethreitz"
 fi
 
 # Disable bi-weekly auto-update checks.
