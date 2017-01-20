@@ -33,12 +33,11 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(
-	history-substring-search
+    history-substring-search
     command-not-found
     docker
     gitfast
     gradle
-    mosh
     mosh
     mvn
     pass
@@ -51,7 +50,7 @@ plugins=(
     )
 
 # pj plugin
-PROJECT_PATHS=(~/Workspace/server/develop)
+PROJECT_PATHS=(~/Workspace/)
 
 source $ZSH/oh-my-zsh.sh
 
