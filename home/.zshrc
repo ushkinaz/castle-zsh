@@ -35,6 +35,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 plugins=(
     history-substring-search
     command-not-found
+    httpie
     docker
     gitfast
     gradle
@@ -43,6 +44,7 @@ plugins=(
     pass
     pj
     redis-cli
+    systemd
     sudo 
     themes
     tmuxinator
