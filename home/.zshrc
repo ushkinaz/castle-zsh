@@ -40,7 +40,7 @@ plugins=(
     gitfast
     gradle
     mosh
-    mvn
+    nvm
     pass
     pj
     redis-cli
@@ -48,7 +48,6 @@ plugins=(
     sudo 
     themes
     tmuxinator
-    vagrant
     )
 
 # pj plugin
