@@ -36,6 +36,7 @@ plugins=(
     history-substring-search
     command-not-found
     httpie
+    fastlane
     docker
     gitfast
     gradle
@@ -74,3 +75,9 @@ fi
 if [ -f $HOME/.zsh_local ]; then
    source $HOME/.zsh_local
 fi
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/dmitry/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/dmitry/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/dmitry/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/dmitry/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
