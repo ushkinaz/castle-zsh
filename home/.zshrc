@@ -35,8 +35,9 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 plugins=(
     history-substring-search
     command-not-found
+    brew
+    macos
     httpie
-    fastlane
     docker
     gitfast
     gradle
@@ -77,7 +78,6 @@ if [ -f $HOME/.zsh_local ]; then
 fi
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/dmitry/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/dmitry/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/dmitry/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/dmitry/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/dmitry/bin/google-cloud-sdk/path.zsh.inc' ]; then
+ . '/Users/dmitry/bin/google-cloud-sdk/path.zsh.inc'; 
+fi
