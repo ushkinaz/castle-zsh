@@ -1,3 +1,5 @@
+zstyle ':omz:plugins:nvm' autoload yes
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -43,7 +45,8 @@ plugins=(
     gradle
     mosh
     nvm
-    pass
+    npm
+    yarn
     pj
     redis-cli
     systemd
