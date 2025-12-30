@@ -43,20 +43,17 @@ plugins=(
     docker
     gitfast
     gradle
-    mosh
     nvm
     npm
     yarn
     pj
-    redis-cli
     systemd
     sudo 
     themes
-    tmuxinator
     )
 
 # pj plugin
-PROJECT_PATHS=(~/Workspace/)
+PROJECT_PATHS=(~"/Workspace/CDDA BN/" ~"/Workspace/private")
 
 source $ZSH/oh-my-zsh.sh
 
@@ -84,3 +81,4 @@ fi
 if [ -f '/Users/dmitry/bin/google-cloud-sdk/path.zsh.inc' ]; then
  . '/Users/dmitry/bin/google-cloud-sdk/path.zsh.inc'; 
 fi
+export PATH="/Users/dmitry/Workspace/CDDA BN/cbn-guide-ushkinaz:$PATH"
